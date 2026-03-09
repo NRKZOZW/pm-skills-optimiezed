@@ -1,0 +1,20 @@
+{
+  "name": "pm-journey-pmf",
+  "version": "1.0.0",
+  "description": "Product Market Fit (PMF) journey plugin: measure and achieve product-market fit. Guides PMs through PMF measurement, growth hacking, core value deepening, and pricing optimization to reach self-sustaining growth.",
+  "author": {
+    "name": "Paweł Huryn",
+    "email": "pawel@productcompass.pm",
+    "url": "https://www.productcompass.pm"
+  },
+  "keywords": [
+    "product-management",
+    "fit-journey",
+    "pmf",
+    "product-market-fit",
+    "growth",
+    "retention"
+  ],
+  "homepage": "https://www.productcompass.pm",
+  "license": "MIT"
+}

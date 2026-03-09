@@ -1,0 +1,20 @@
+{
+  "name": "pm-journey-gtm",
+  "version": "1.0.0",
+  "description": "Go To Market (GTM) journey plugin: scale your product to market. Guides PMs through GTM strategy, cross-functional alignment, unit economics optimization, and scaling roadmap to drive sustainable business growth.",
+  "author": {
+    "name": "Paweł Huryn",
+    "email": "pawel@productcompass.pm",
+    "url": "https://www.productcompass.pm"
+  },
+  "keywords": [
+    "product-management",
+    "fit-journey",
+    "gtm",
+    "go-to-market",
+    "scaling",
+    "unit-economics"
+  ],
+  "homepage": "https://www.productcompass.pm",
+  "license": "MIT"
+}

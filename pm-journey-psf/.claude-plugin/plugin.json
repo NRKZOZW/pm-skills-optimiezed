@@ -1,0 +1,20 @@
+{
+  "name": "pm-journey-psf",
+  "version": "1.0.0",
+  "description": "Problem Solution Fit (PSF) journey plugin: define and validate solutions for customer problems. Guides PMs through value proposition design, ideation, prototyping, and solution acceptance testing.",
+  "author": {
+    "name": "Paweł Huryn",
+    "email": "pawel@productcompass.pm",
+    "url": "https://www.productcompass.pm"
+  },
+  "keywords": [
+    "product-management",
+    "fit-journey",
+    "psf",
+    "problem-solution-fit",
+    "validation",
+    "prototyping"
+  ],
+  "homepage": "https://www.productcompass.pm",
+  "license": "MIT"
+}

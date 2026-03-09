@@ -1,0 +1,20 @@
+{
+  "name": "pm-journey-spf",
+  "version": "1.0.0",
+  "description": "Solution Product Fit (SPF) journey plugin: build and validate your MVP. Guides PMs through MVP scoping, requirements definition, KPI setting, sprint planning, and user feedback analysis to verify users find real value.",
+  "author": {
+    "name": "Paweł Huryn",
+    "email": "pawel@productcompass.pm",
+    "url": "https://www.productcompass.pm"
+  },
+  "keywords": [
+    "product-management",
+    "fit-journey",
+    "spf",
+    "solution-product-fit",
+    "mvp",
+    "execution"
+  ],
+  "homepage": "https://www.productcompass.pm",
+  "license": "MIT"
+}

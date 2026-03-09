@@ -1,0 +1,20 @@
+{
+  "name": "pm-journey-cpf",
+  "version": "1.0.0",
+  "description": "Customer Problem Fit (CPF) journey plugin: validate that customers truly have a problem worth solving. Guides PMs through market research, customer discovery, persona creation, and problem validation.",
+  "author": {
+    "name": "Paweł Huryn",
+    "email": "pawel@productcompass.pm",
+    "url": "https://www.productcompass.pm"
+  },
+  "keywords": [
+    "product-management",
+    "fit-journey",
+    "cpf",
+    "customer-problem-fit",
+    "discovery",
+    "validation"
+  ],
+  "homepage": "https://www.productcompass.pm",
+  "license": "MIT"
+}
