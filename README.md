@@ -4,21 +4,57 @@
 
 # PM Skills Marketplace: The AI Operating System for Better Product Decisions
 
-> 65 PM skills and 36 chained workflows across 8 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, and growth. 
+> 82 PM skills and 46 chained workflows across 13 plugins. Claude Code, Cowork, and more. From discovery to strategy, execution, launch, and growth — plus a 5-stage Fit Journey (CPF → PSF → SPF → PMF → GTM).
 
 ![Plugin overview](.docs/images/plugins-overview.webp)
 
 Designed for Claude Code and Cowork. Skills compatible with other AI assistants.
 
+---
+
+## What Is This? (For First-Time Users)
+
+PM Skills Marketplace は、Claude（Anthropic の AI アシスタント）に **プロダクトマネジメントの専門知識** を追加するプラグイン集です。インストールすると、Claude がPM のフレームワークやベストプラクティスに基づいた構造的なアウトプットを返してくれるようになります。
+
+### Key Concepts
+
+| Term | What It Means | Example |
+|------|--------------|---------|
+| **Skill** | Claude に特定の PM 知識を教えるファイル。会話中に自動で読み込まれる | `opportunity-solution-tree` — Teresa Torres の OST フレームワーク |
+| **Command** | `/` で始まるショートカット。複数のスキルを組み合わせたワークフロー | `/discover` — アイデア出し → 仮説整理 → 優先順位付け → 実験設計を一気に実行 |
+| **Plugin** | 関連するスキルとコマンドをまとめたパッケージ | `pm-product-discovery` — ディスカバリー関連の 13 スキル + 5 コマンド |
+| **Marketplace** | プラグインの集合体。一括インストールで全プラグインが使える | `pm-skills` — 13 プラグインすべてを含む |
+
+### What You Need Before Starting
+
+- **Claude Pro / Team / Enterprise** のいずれかのプラン（無料プランではプラグインを利用できません）
+- **Claude Cowork**（デスクトップアプリ、非エンジニア向け推奨）または **Claude Code**（CLI ツール、開発者向け）
+
+> **Claude Cowork って何？**
+> Anthropic が提供するデスクトップアプリで、プラグインのインストールや `/command` の実行がGUIで行えます。
+> **Claude Code って何？**
+> ターミナルから Claude を操作する CLI ツールです。`npm install -g @anthropic-ai/claude-code` でインストールできます。
+
+---
+
 ## Start Here
 
-New idea? → `/discover`  
-Need strategic clarity? → `/strategy`  
-Writing a PRD? → `/write-prd`  
-Planning a launch? → `/plan-launch`  
-Defining metrics? → `/north-star`
+プラグインをインストールしたら、すぐにコマンドを試してみましょう。
+
+| やりたいこと | コマンド | 入力例 |
+|------------|---------|-------|
+| 新しいアイデアを検証したい | `/discover` | `/discover リモートチーム向けAI議事録ツール` |
+| 戦略を整理したい | `/strategy` | `/strategy B2B代理店向けプロジェクト管理ツール` |
+| PRD を書きたい | `/write-prd` | `/write-prd アラート疲れを軽減するスマート通知` |
+| ローンチを計画したい | `/plan-launch` | `/plan-launch 中規模エンジニアチーム向けAIコードレビュー` |
+| 指標を定義したい | `/north-star` | `/north-star フリーランスとクライアントの双方向マーケットプレイス` |
+| プロダクトの適合性を段階的に検証したい | `/run-cpf` | `/run-cpf 中小企業向けAI経費管理ツール` |
+
+> **Tip**: コマンドを実行すると、最後に「次にやるべきこと」が提案されます。提案に従って次のコマンドを実行するだけで、PM ワークフロー全体を進められます。
 
 If this project helps you, ⭐ the repo.
+
+---
 
 ## Why PM Skills Marketplace?
 
@@ -28,15 +64,17 @@ Each skill encodes a proven PM framework — discovery, assumption mapping, prio
 
 The result: better product decisions, not just faster documents.
 
+---
+
 ## How It Works (Skills, Commands, Plugins)
 
-**Skills** are the building blocks of the marketplace. Each skill gives Claude domain knowledge, analytical frameworks, or a guided workflow for a specific PM task. Some skills also work as reusable foundations that multiple commands share. 
+**Skills** are the building blocks of the marketplace. Each skill gives Claude domain knowledge, analytical frameworks, or a guided workflow for a specific PM task. Some skills also work as reusable foundations that multiple commands share.
 
 Skills are loaded automatically when relevant to the conversation — no explicit invocation needed. If needed (e.g., prioritizing skills over general knowledge), you can **force loading skills** with `/plugin-name:skill-name` or `/skill-name` (Claude will add the prefix).
 
 **Commands** are user-triggered workflows invoked with `/command-name`. They chain one or more skills into an end-to-end process. For example, `/discover` chains four skills together: brainstorm-ideas → identify-assumptions → prioritize-assumptions → brainstorm-experiments.
 
-**Plugins** group related skills and commands into installable packages. Each plugin covers a PM domain — discovery, strategy, execution, and so on. Installing the marketplace gives you all 8 plugins at once.
+**Plugins** group related skills and commands into installable packages. Each plugin covers a PM domain — discovery, strategy, execution, and so on. Installing the marketplace gives you all 13 plugins at once.
 
 ![How skills work](.docs/images/how-skills-work.webp)
 
@@ -44,35 +82,52 @@ Commands use skills. Some skills serve multiple commands. Some skills (like `pri
 
 Commands are designed to flow into each other, matching the PM workflow. After any command completes, it suggests relevant next commands — just follow the prompts.
 
+---
+
 ## Installation
 
 ### Claude Cowork (recommended for non-developers)
 
-1. Open **Customize** (bottom-left)
-2. Go to **Browse plugins** → **Personal** → **+**
-3. Select **Add marketplace from GitHub**
-4. Enter: `phuryn/pm-skills`
+> **Cowork がまだの方**: [claude.ai](https://claude.ai) からデスクトップアプリをダウンロード・インストールしてください。
 
-All 8 plugins install automatically. You get both commands (`/discover`, `/strategy`, etc.) and skills.
+1. Cowork を起動し、左下の **Customize** をクリック
+2. **Browse plugins** → **Personal** → **+** をクリック
+3. **Add marketplace from GitHub** を選択
+4. `phuryn/pm-skills` と入力して Enter
+
+All 13 plugins install automatically. You get both commands (`/discover`, `/strategy`, etc.) and skills.
 
 ![Installing PM Skills in Claude Cowork](.docs/images/pm-skills-install.gif)
 
+> **インストール後の確認方法**: チャット入力欄で `/` と入力すると、利用可能なコマンド一覧が表示されます。`/discover` や `/strategy` が表示されればインストール成功です。
+
 ### Claude Code (CLI)
+
+> **Claude Code がまだの方**: ターミナルで `npm install -g @anthropic-ai/claude-code` を実行してインストールしてください（Node.js 18+ が必要です）。
 
 ```bash
 # Step 1: Add the marketplace
 claude plugin marketplace add phuryn/pm-skills
 
-# Step 2: Install individual plugins
-claude plugin install pm-toolkit@pm-skills
+# Step 2: Install individual plugins (core PM plugins)
+claude plugin install pm-product-discovery@pm-skills
 claude plugin install pm-product-strategy@pm-skills
-claude plugin install pm-product-discovery@pm-skills 
-claude plugin install pm-market-research@pm-skills 
+claude plugin install pm-execution@pm-skills
+claude plugin install pm-market-research@pm-skills
 claude plugin install pm-data-analytics@pm-skills
 claude plugin install pm-marketing-growth@pm-skills
 claude plugin install pm-go-to-market@pm-skills
-claude plugin install pm-execution@pm-skills
+claude plugin install pm-toolkit@pm-skills
+
+# Step 3 (optional): Install Fit Journey plugins
+claude plugin install pm-journey-cpf@pm-skills
+claude plugin install pm-journey-psf@pm-skills
+claude plugin install pm-journey-spf@pm-skills
+claude plugin install pm-journey-pmf@pm-skills
+claude plugin install pm-journey-gtm@pm-skills
 ```
+
+> **インストール後の確認方法**: `claude` を起動し、`/discover テスト` と入力してみてください。ディスカバリーワークフローが始まれば成功です。
 
 ### Other AI assistants (skills only)
 
@@ -94,7 +149,59 @@ done
 
 ---
 
+## Usage Guide (How to Use After Installation)
+
+### Basic: Use Commands
+
+コマンドは `/command-name` の形式でチャットに入力するだけで使えます。
+
+```
+/discover AI-powered meeting summarizer for remote teams
+```
+
+Claude will walk you through each step interactively, asking clarifying questions as needed.
+
+### Intermediate: Use Skills Directly
+
+特定のフレームワークだけ使いたい場合は、スキル名を指定して呼び出すか、自然言語で質問するだけでOKです。
+
+```
+/pm-product-discovery:opportunity-solution-tree
+```
+
+Or simply ask:
+
+```
+Help me build an Opportunity Solution Tree for improving user activation
+```
+
+Claude automatically detects the relevant skill and applies it.
+
+### Advanced: Chain Commands
+
+コマンドは PM ワークフローに沿って連鎖するよう設計されています。実行後の提案に従うだけで、ディスカバリーから戦略、実行、ローンチまでシームレスに進められます。
+
+```
+/discover → /strategy → /write-prd → /plan-launch
+```
+
+### Fit Journey: End-to-End Product Validation
+
+Fit Journey プラグインを使うと、プロダクトの適合性を CPF → PSF → SPF → PMF → GTM の 5 段階で検証できます。
+
+```
+/run-cpf 中小企業向けAI経費管理ツール
+  ↓ GO判定が出たら
+/run-psf 中小企業向けAI経費管理ツール
+  ↓ GO判定が出たら
+/run-spf → /run-pmf → /run-gtm
+```
+
+---
+
 ## Available Plugins
+
+### Core PM Plugins (8 plugins)
 
 <details>
 <summary><strong>1. pm-product-discovery</strong> — Ideation, experiments, assumption testing, OSTs, interviews (13 skills, 5 commands)</summary>
@@ -389,6 +496,183 @@ Commands:
 - `/review-resume [attach your PM resume]`
 - `/tailor-resume [attach resume + paste job description]`
 - `/proofread Here's the draft of our Q1 investor update`
+
+</details>
+
+### Fit Journey Plugins (5 plugins)
+
+プロダクトの成長段階に沿って、適合性を段階的に検証するプラグイン群です。各ステージで GO / PIVOT / KILL の判定を行い、次のステージに進むべきかを判断します。
+
+```
+CPF (Customer Problem Fit)
+ → PSF (Problem Solution Fit)
+   → SPF (Solution Product Fit)
+     → PMF (Product Market Fit)
+       → GTM (Go To Market)
+```
+
+<details>
+<summary><strong>9. pm-journey-cpf</strong> — Customer Problem Fit: validate that customers truly have a problem worth solving (4 skills, 2 commands)</summary>
+
+Guides PMs through market research, customer discovery, persona creation, and problem validation.
+
+**Skills (4):**
+
+- `customer-discovery-plan` — Structured approach to conducting customer interviews
+- `empathy-map` — Framework to understand customer perspectives and motivations
+- `problem-statement` — Create testable problem hypotheses using structured templates
+- `problem-validation` — Validate problem statements through customer research
+
+**Commands (2):**
+
+- `/run-cpf` — Run a full Customer Problem Fit validation cycle (problem hypothesis → customer discovery → GO/PIVOT/KILL decision)
+- `/validate-problem` — Validate a specific problem statement against quality criteria
+
+**Examples:**
+
+- `/run-cpf AI-powered expense management tool for small businesses`
+- `/validate-problem "SMB owners spend 5+ hours/week on manual receipt categorization"`
+
+</details>
+
+<details>
+<summary><strong>10. pm-journey-psf</strong> — Problem Solution Fit: define and validate solutions (3 skills, 2 commands)</summary>
+
+Guides PMs through value proposition design, ideation, prototyping, and solution acceptance testing.
+
+**Skills (3):**
+
+- `value-proposition-canvas` — Map customer jobs, pains, and gains to your value proposition (Strategyzer)
+- `prototype-test-plan` — Design and execute prototype testing plans
+- `solution-validation` — Framework for validating solution concepts through testing
+
+**Commands (2):**
+
+- `/run-psf` — Run a full Problem Solution Fit validation cycle (solution ideation → prototyping → validation)
+- `/design-experiment` — Design an experiment to test solution assumptions
+
+**Examples:**
+
+- `/run-psf AI expense categorization using receipt photos`
+- `/design-experiment Will users trust AI-categorized expenses without manual review?`
+
+</details>
+
+<details>
+<summary><strong>11. pm-journey-spf</strong> — Solution Product Fit: build and validate your MVP (3 skills, 2 commands)</summary>
+
+Guides PMs through MVP scoping, requirements definition, KPI setting, sprint planning, and user feedback analysis.
+
+**Skills (3):**
+
+- `mvp-scoping` — Define MVP scope using user story mapping, riskiest assumption testing, and MoSCoW prioritization
+- `kpi-framework` — Define and track KPIs for MVP success
+- `feedback-loop` — Establish feedback mechanisms to collect user insights during development
+
+**Commands (2):**
+
+- `/run-spf` — Run a full Solution Product Fit validation cycle (MVP scoping → user feedback → value validation)
+- `/scope-mvp` — Scope an MVP with clear success criteria
+
+**Examples:**
+
+- `/run-spf AI expense management app — photo receipt capture + auto-categorization`
+- `/scope-mvp Real-time collaboration feature for our project management tool`
+
+</details>
+
+<details>
+<summary><strong>12. pm-journey-pmf</strong> — Product Market Fit: measure and achieve PMF (4 skills, 2 commands)</summary>
+
+Guides PMs through PMF measurement, growth hacking, core value deepening, and pricing optimization.
+
+**Skills (4):**
+
+- `pmf-measurement` — Comprehensive PMF scorecard (Sean Ellis Test, retention curves, NPS, engagement depth, revenue signals)
+- `pmf-survey` — Design and conduct PMF surveys
+- `growth-hacking` — Framework for identifying and scaling growth loops
+- `core-value-deepening` — Deepen adoption of core product value
+
+**Commands (2):**
+
+- `/run-pmf` — Run a full Product Market Fit validation cycle (PMF measurement → pricing optimization)
+- `/measure-pmf` — Assess whether a product has achieved product-market fit
+
+**Examples:**
+
+- `/run-pmf Our expense app has 500 active users after 3 months`
+- `/measure-pmf We have 40% "very disappointed" on Sean Ellis, but flat retention`
+
+</details>
+
+<details>
+<summary><strong>13. pm-journey-gtm</strong> — Go To Market: scale your product (3 skills, 2 commands)</summary>
+
+Guides PMs through GTM strategy, cross-functional alignment, unit economics optimization, and scaling roadmap.
+
+**Skills (3):**
+
+- `unit-economics` — Deep analysis of CAC, LTV, LTV:CAC ratio, payback period, contribution margin, and channel ROI
+- `cross-functional-alignment` — Align sales, marketing, ops, and product on GTM execution
+- `scaling-roadmap` — Build a roadmap for scaled growth
+
+**Commands (2):**
+
+- `/run-gtm` — Run a full Go To Market validation cycle (GTM strategy → scaling execution)
+- `/check-unit-economics` — Analyze unit economics and diagnose profitability gaps
+
+**Examples:**
+
+- `/run-gtm Expanding our expense app from SMB to mid-market`
+- `/check-unit-economics CAC=$120, LTV=$450, payback=4mo, churn=6%`
+
+</details>
+
+---
+
+## FAQ
+
+<details>
+<summary><strong>Q: 無料プランでも使えますか?</strong></summary>
+
+いいえ。プラグイン機能は Claude Pro / Team / Enterprise プランでのみ利用できます。
+
+</details>
+
+<details>
+<summary><strong>Q: コマンドが認識されません</strong></summary>
+
+1. プラグインが正しくインストールされているか確認してください
+2. Cowork の場合: チャット入力欄で `/` を入力し、コマンド一覧が表示されるか確認
+3. Claude Code の場合: `claude plugin list` でインストール済みプラグインを確認
+4. それでも動かない場合: Cowork / Claude Code を再起動してみてください
+
+</details>
+
+<details>
+<summary><strong>Q: スキルとコマンドの違いは?</strong></summary>
+
+- **スキル**: Claude が自動的に参照する知識ベース。会話の文脈に応じて読み込まれます。明示的に呼び出すこともできます
+- **コマンド**: `/` で始めるワークフロー。複数のスキルを組み合わせて段階的にガイドしてくれます
+
+迷ったら `/command-name` でコマンドを使うのが簡単です。
+
+</details>
+
+<details>
+<summary><strong>Q: 英語以外でも使えますか?</strong></summary>
+
+はい。コマンドの入力やプロダクトの説明は日本語など任意の言語で入力できます。Claude は入力言語に合わせて回答します。
+
+</details>
+
+<details>
+<summary><strong>Q: Fit Journey プラグインと Core プラグインの違いは?</strong></summary>
+
+- **Core プラグイン** (8個): 個別の PM タスクに特化（PRD を書く、OKR を作る、競合分析する、など）
+- **Fit Journey プラグイン** (5個): プロダクトの成長段階に沿った検証フレームワーク（CPF → PSF → SPF → PMF → GTM）
+
+Core はタスク単位、Fit Journey はフェーズ単位で使い分けてください。
 
 </details>
 
