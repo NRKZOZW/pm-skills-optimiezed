@@ -109,7 +109,7 @@ PM Skills Marketplace は、Claude（Anthropic の AI アシスタント）に *
 2. 左下の **Customize** をクリック
 3. **Browse plugins** → **Personal** → **+** をクリック
 4. **Add marketplace from GitHub** を選択
-5. `phuryn/pm-skills` と入力して Enter
+5. `NRKZOZW/pm-skills-optimiezed` と入力して Enter
 
 これで 13 プラグインすべてが自動的にインストールされます。コマンド（`/discover`、`/strategy` など）とスキルの両方が使えるようになります。
 
@@ -128,7 +128,7 @@ PM Skills Marketplace は、Claude（Anthropic の AI アシスタント）に *
 
 ```bash
 # ステップ 1: マーケットプレイスを追加
-claude plugin marketplace add phuryn/pm-skills
+claude plugin marketplace add NRKZOZW/pm-skills-optimiezed
 
 # ステップ 2: コアプラグインをインストール
 claude plugin install pm-product-discovery@pm-skills

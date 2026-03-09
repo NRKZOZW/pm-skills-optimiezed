@@ -93,7 +93,7 @@ Commands are designed to flow into each other, matching the PM workflow. After a
 1. Cowork を起動し、左下の **Customize** をクリック
 2. **Browse plugins** → **Personal** → **+** をクリック
 3. **Add marketplace from GitHub** を選択
-4. `phuryn/pm-skills` と入力して Enter
+4. `NRKZOZW/pm-skills-optimiezed` と入力して Enter
 
 All 13 plugins install automatically. You get both commands (`/discover`, `/strategy`, etc.) and skills.
 
@@ -107,7 +107,7 @@ All 13 plugins install automatically. You get both commands (`/discover`, `/stra
 
 ```bash
 # Step 1: Add the marketplace
-claude plugin marketplace add phuryn/pm-skills
+claude plugin marketplace add NRKZOZW/pm-skills-optimiezed
 
 # Step 2: Install individual plugins (core PM plugins)
 claude plugin install pm-product-discovery@pm-skills
