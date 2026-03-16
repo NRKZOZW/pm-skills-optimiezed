@@ -136,6 +136,7 @@ The `skills/*/SKILL.md` files follow the universal skill format and work with an
 | Tool | How to use | What works |
 |------|-----------|------------|
 | **Gemini CLI** | Copy skill folders to `.gemini/skills/` | Skills only |
+| **OpenCode** | Copy skill folders to `.opencode/skills/` | Skills only |
 | **Cursor** | Copy skill folders to `.cursor/skills/` | Skills only |
 | **Codex CLI** | Copy skill folders to `.codex/skills/` | Skills only |
 | **Kiro** | Copy skill folders to `.kiro/skills/` | Skills only |
